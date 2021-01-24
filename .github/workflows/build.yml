@@ -26,5 +26,5 @@ jobs:
     - name: Build on non-Windows
       run: |
         ./configure --prefix=$PREFIX --with-charset=utf8
-        make && make install
+        make
       if: matrix.os != 'windows-latest'
