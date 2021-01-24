@@ -1,6 +1,6 @@
 AUTOMAKE_OPTIONS = no-dependencies
 lib_LTLIBRARIES = libmecab.la
-EXTRA_DIST = Makefile.msvc.in make.bat
+EXTRA_DIST = Makefile.msvc.x64.in make.bat
 pkglibexecdir = ${libexecdir}/mecab
 INCLUDES = -DDIC_VERSION=$(DIC_VERSION) $(MECAB_NO_TLS) $(MECAB_USE_UTF8_ONLY) -DMECAB_DEFAULT_RC="\"$(MECAB_DEFAULT_RC)\""
 libmecab_la_LDFLAGS = -no-undefined -version-info $(LTVERSION)
