@@ -18,8 +18,10 @@ jobs:
       if: matrix.os == 'windows-latest'
     - name: Build on Windows
       run: |
+        call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
         cd src
         nmake -f Makefile.msvc.x64.in
+      shell: cmd
       if: matrix.os == 'windows-latest'
     - name: Build on non-Windows
       run: |
